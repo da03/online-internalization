@@ -1,3 +1,43 @@
+---
+name: Online Internalization ICLR
+overview: A comprehensive research plan for "Online Internalization" — training LLMs to internalize multi-turn conversation history into parameters via recursive LoRA adapter generation, instead of storing it in context. Targets ICLR 2026 submission.
+todos:
+  - id: phase0-setup
+    content: "Phase 0: Repo setup (requirements.txt, configs, logging infra) + WildChat download and distribution analysis"
+    status: pending
+  - id: phase1-poc
+    content: "Phase 1: Proof of concept — implement LoRA bases, coefficient head, forward hooks, test on 2-turn conversations"
+    status: pending
+  - id: phase1-baseline
+    content: "Phase 1: Implement baseline (1) current-turn-only model"
+    status: pending
+  - id: phase2-multiturn
+    content: "Phase 2: Recursive multi-turn LoRA generation with gradient checkpointing + BPTT"
+    status: pending
+  - id: phase2-core
+    content: "Phase 2: Train all 3 settings on filtered WildChat, produce core perplexity comparison"
+    status: pending
+  - id: phase3-ablations
+    content: "Phase 3: Run ablations (rank, bases, BPTT depth, layers, extraction method, accumulation strategy)"
+    status: pending
+  - id: phase3-extrapolation
+    content: "Phase 3: Context length extrapolation experiments (train on 5-10 turns, test on 15-30+)"
+    status: pending
+  - id: phase3-analysis
+    content: "Phase 3: Analysis plots and qualitative inspection of learned LoRA bases"
+    status: pending
+  - id: phase4-knowledge
+    content: "Phase 4 (stretch): Knowledge update experiment — internalize 2025 conversations, test temporal knowledge"
+    status: pending
+  - id: phase4-transfer
+    content: "Phase 4 (stretch): Cross-user transfer experiment"
+    status: pending
+  - id: phase5-paper
+    content: "Phase 5: Write ICLR 2026 paper draft"
+    status: pending
+isProject: false
+---
+
 # Online Internalization: Learning from Conversations via Recursive LoRA Generation
 
 ## 1. Idea Assessment
